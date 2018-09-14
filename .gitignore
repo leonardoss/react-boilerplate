@@ -6,6 +6,10 @@
 # build
 build
 
+#editors
+.idea
+.vscode/
+
 # misc
 coverage
 *.css
@@ -14,8 +18,6 @@ coverage
 .Trashes
 Thumbs.db
 Desktop.ini
-.idea
-.vscode/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
