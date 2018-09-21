@@ -11,6 +11,7 @@
   "author": "Leonardo Souza",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/core": "^3.1.0",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   },
