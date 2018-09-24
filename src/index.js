@@ -5,7 +5,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import primaryColor from '@material-ui/core/colors/blue';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-import Header from './components/Header';
 import Routes from './routes/index';
 
 import './styles/init.scss';
@@ -20,8 +19,9 @@ const ThemeUi = createMuiTheme({
 const App = () => (
   <MuiThemeProvider theme={ ThemeUi }>
     <CssBaseline>
-      <Header />
-      <Routes />
+      <Router>
+        <Routes />
+      </Router>
     </CssBaseline>
   </MuiThemeProvider>
 );
