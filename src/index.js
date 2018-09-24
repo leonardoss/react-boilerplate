@@ -3,13 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './routes/index';
+import Header from './components/Header';
 
 import './styles/init.scss';
 
 const App = () => (
   <Router>
     <div>
-      CAPA?
+      <Header />
       <Routes />
     </div>
   </Router>
