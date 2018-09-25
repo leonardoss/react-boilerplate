@@ -11,11 +11,6 @@ module.exports = (env, options) => {
       path: path.join(__dirname, '/dist'),
       filename: 'index_bundle.js',
     },
-    devServer: {
-      historyApiFallback: true,
-      contentBase: './',
-      hot: true,
-    },
     module: {
       rules: [
         {
