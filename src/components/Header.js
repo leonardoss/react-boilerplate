@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <div className="container">
+      <nav className="container">
         <ul className="nav">
           <li className="nav-item">
             <Link to="/">Dashboard</Link>
@@ -13,7 +13,7 @@ class Header extends Component {
             <Link to="/about">About</Link>
           </li>
         </ul>
-      </div>
+      </nav>
     );
   }
 }

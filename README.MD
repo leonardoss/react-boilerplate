@@ -16,5 +16,10 @@ $ npm start
 $ npm run build
 ```
 
+###  Tests
+```
+$ npm test
+```
+
 ###  TO DO
 - jest
