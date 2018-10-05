@@ -6,7 +6,7 @@ module.exports = (env, options) => {
   const isDevMode = options.mode === 'development';
 
   return {
-    entry: './src/index.js',
+    entry: ['@babel/polyfill', './src/index.js'],
     output: {
       path: path.join(__dirname, '/dist'),
       filename: 'index_bundle.js',
