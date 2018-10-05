@@ -7,7 +7,7 @@ import NotFound from '../containers/NotFound';
 import PrivateRoute from './privateRoute';
 import PublicRoute from './publicRoute';
 import About from '../containers/About';
-import Auth from '../containers/Auth';
+import Login from '../containers/Login';
 
 class Routes extends React.Component {
    render() {
@@ -15,7 +15,7 @@ class Routes extends React.Component {
       <Switch>
         <PrivateRoute exact path="/" component={ Dashboard } />
         <PrivateRoute exact path="/about" component={ About } />
-        <PublicRoute exact path="/auth" component={ Auth } />
+        <PublicRoute exact path="/auth" component={ Login } />
         <Route component={ NotFound } />
       </Switch>
     );
