@@ -1,0 +1,53 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "reactboilerplate-20181001164926-authRole",
+			"UnauthRoleArn": "arn:aws:iam::508991493961:role/reactboilerplate-20181001164926-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::508991493961:role/reactboilerplate-20181001164926-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "reactboilerplate-20181001164926-deployment",
+			"UnauthRoleName": "reactboilerplate-20181001164926-unauthRole",
+			"StackName": "reactboilerplate-20181001164926",
+			"StackId": "arn:aws:cloudformation:us-east-2:508991493961:stack/reactboilerplate-20181001164926/1b3f47f0-c5b3-11e8-9db8-063ebf2048ea"
+		}
+	},
+	"auth": {
+		"cognito362b40bc": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactboilerplate-20181001164926-deployment/amplify-cfn-templates/auth/cognito362b40bc-cloudformation-template.yml",
+				"logicalId": "authcognito362b40bc"
+			},
+			"lastPushTimeStamp": "2018-10-02T17:38:33.825Z",
+			"output": {
+				"AppClientSecret": "1le3isbmj6a66mlvjp87qsv2vlvs77rn1qkcmjapviegnfeb81jf",
+				"UserPoolId": "us-east-2_miMYrfOdP",
+				"AppClientIDWeb": "murjs8l06i0f4f5se17jvs3ga",
+				"AppClientID": "1vitl4l9k8po4ugc0p8cml2lbn",
+				"IdentityPoolId": "us-east-2:c47d24f9-0c42-4a08-97aa-6d9d9308f462",
+				"IdentityPoolName": "cognito362b40bc_identitypool_362b40bc",
+				"UserPoolName": "cognito362b40bc_userpool_362b40bc"
+			},
+			"lastPushDirHash": "Y/u216XFvDZQqf1SI0ClIBIcFg8="
+		}
+	},
+	"hosting": {
+		"S3AndCloudFront": {
+			"service": "S3AndCloudFront",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/reactboilerplate-20181001164926-deployment/amplify-cfn-templates/hosting/template.json",
+				"logicalId": "hostingS3AndCloudFront"
+			},
+			"lastPushTimeStamp": "2018-10-02T17:38:33.829Z",
+			"output": {
+				"S3BucketSecureURL": "https://reactboilerplate-20181002143645--hostingbucket.s3.amazonaws.com",
+				"WebsiteURL": "http://reactboilerplate-20181002143645--hostingbucket.s3-website.us-east-2.amazonaws.com",
+				"Region": "us-east-2",
+				"HostingBucketName": "reactboilerplate-20181002143645--hostingbucket"
+			},
+			"lastPushDirHash": "wrQ8EF/oB9lpRffDJ1JQPDN6PC8="
+		}
+	}
+}

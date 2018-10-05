@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "reactboilerplate-20181001164926-authRole",
+            "UnauthRoleArn": "arn:aws:iam::508991493961:role/reactboilerplate-20181001164926-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::508991493961:role/reactboilerplate-20181001164926-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "reactboilerplate-20181001164926-deployment",
+            "UnauthRoleName": "reactboilerplate-20181001164926-unauthRole",
+            "StackName": "reactboilerplate-20181001164926",
+            "StackId": "arn:aws:cloudformation:us-east-2:508991493961:stack/reactboilerplate-20181001164926/1b3f47f0-c5b3-11e8-9db8-063ebf2048ea"
+        }
+    }
+}
