@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -10,8 +11,6 @@ import {
   Typography, Grid, Divider, Paper,
   Input, InputLabel, FormControl,
 } from '@material-ui/core';
-
-import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   layout: {
@@ -53,7 +52,7 @@ const styles = theme => ({
 });
 
 class SignIn extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       email: '',

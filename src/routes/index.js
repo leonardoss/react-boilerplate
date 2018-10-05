@@ -7,7 +7,7 @@ import NotFound from '../containers/NotFound';
 import PrivateRoute from './privateRoute';
 import PublicRoute from './publicRoute';
 import About from '../containers/About';
-import Auth from '../containers/Auth';
+import Auth from '../containers/Login';
 
 class Routes extends React.Component {
    render() {

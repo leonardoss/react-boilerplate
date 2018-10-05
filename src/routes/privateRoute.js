@@ -29,9 +29,14 @@ class PrivateRoute extends React.Component {
   }
 
   render() {
+
     return <Route render={ this.renderPropComponent } />;
   }
 }
+
+PrivateRoute.defaultProps = {
+  authenticated: false,
+};
 
 PrivateRoute.propTypes = {
   history: PropTypes.object,
@@ -42,6 +47,7 @@ PrivateRoute.propTypes = {
 
 export default compose(withRouter, connect(state => ({
   user: state.UserReducer.user,
+  authenticated: state.UserReducer.authenticated,
 }), {
   ...actions,
 }))(PrivateRoute);

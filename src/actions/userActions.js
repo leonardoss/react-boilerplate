@@ -1,8 +1,8 @@
-export const RECEIVE_USER = 'RECEIVE_USER';
+export const LOGIN_USER = 'LOGIN_USER';
 
-export function receiveUser(user) {
+export function loginUser(user) {
   return {
-    type: RECEIVE_USER,
+    type: LOGIN_USER,
     user,
     authenticated: true,
   };
