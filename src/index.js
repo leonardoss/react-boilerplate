@@ -19,6 +19,7 @@ const ThemeUi = createMuiTheme({
 });
 
 const CustomStore = new Store();
+export const store = CustomStore.store;
 
 const App = () => (
   <Provider store={ CustomStore.store }>
