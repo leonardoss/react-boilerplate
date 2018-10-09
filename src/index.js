@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 import { HashRouter as Router } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import primaryColor from '@material-ui/core/colors/blue';
@@ -20,6 +19,7 @@ const ThemeUi = createMuiTheme({
 });
 
 const CustomStore = new Store();
+export const store = CustomStore.store;
 
 const App = () => (
   <Provider store={ CustomStore.store }>

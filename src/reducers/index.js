@@ -1,7 +1,7 @@
-import UserReducer from './user';
+import AuthReducer from './auth';
 
 const reducers = {
-  UserReducer,
+  AuthReducer,
 };
 
 export default reducers;

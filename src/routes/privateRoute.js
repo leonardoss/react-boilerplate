@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
-import * as actions from '../actions/userActions';
+import * as actions from '../actions/authActions';
 
 class PrivateRoute extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ PrivateRoute.propTypes = {
 };
 
 export default compose(withRouter, connect(state => ({
-  user: state.UserReducer.user,
+  user: state.AuthReducer.user,
 }), {
   ...actions,
 }))(PrivateRoute);
