@@ -25,10 +25,9 @@ export function authWithUsernameAndPassword(credentials) {
   };
 }
 
-export function authWithFederations(federation, credentials) {
+export function authWithFacebook(federarion) {
   return {
     type: AUTH_WITH_FEDERATIONS,
-    credentials,
-    federation,
+    federation: 'facebook',
   };
 }

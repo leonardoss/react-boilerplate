@@ -18,15 +18,16 @@ class Login extends React.Component {
 
   render() {
     const { state } = this;
-    const { authWithUsernameAndPassword } = this.props;
+    const { authWithUsernameAndPassword, authWithFacebook } = this.props;
     return (
-      <SignIn handleUserLogin={ authWithUsernameAndPassword } errorMessage={ state.errorMessage } />
+      <SignIn handleUserLogin={ authWithUsernameAndPassword } authFacebook={ authWithFacebook } errorMessage={ state.errorMessage } />
     );
   }
 }
 
 Login.propTypes = {
   authWithUsernameAndPassword: PropTypes.func.isRequired,
+  authWithFacebook: PropTypes.func.isRequired,
 };
 
 export default compose(connect(state => ({

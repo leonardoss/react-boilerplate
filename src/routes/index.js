@@ -9,8 +9,29 @@ import PublicRoute from './publicRoute';
 import About from '../containers/About';
 import Login from '../containers/Login';
 
+import firebase from '../firebase_config';
+
 class Routes extends React.Component {
-   render() {
+  componentDidMount() {
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   if (user) {
+    //     // User is signed in.
+    //     const userInfo = {
+    //       displayName: user.displayName,
+    //       email: user.email,
+    //       emailVerified: user.emailVerified,
+    //       photoURL: user.photoURL,
+    //       isAnonymous: user.isAnonymous,
+    //       uid: user.uid,
+    //       providerData: user.providerData,
+    //     };
+    //   } else {
+    //     // this.setState({user: {}});
+    //   }
+    // });
+  }
+
+  render() {
     return (
       <Switch>
         <PrivateRoute exact path="/" component={ Dashboard } />
