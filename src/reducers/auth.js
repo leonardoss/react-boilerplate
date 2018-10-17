@@ -6,7 +6,7 @@ import {
 const initialState = {
   user: {},
   authenticated: false,
-  isAuthenticating: false,
+  isAuthenticating: true,
 };
 
 export default function AuthReducer(state = initialState, action) {

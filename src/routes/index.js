@@ -10,28 +10,39 @@ import About from '../containers/About';
 import Login from '../containers/Login';
 
 import firebase from '../firebase_config';
+import {compose} from "redux";
+import {connect} from "react-redux";
+
+import LinearProgress from '@material-ui/core/LinearProgress';
+
+import * as authActions from "../actions/authActions";
 
 class Routes extends React.Component {
   componentDidMount() {
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     // User is signed in.
-    //     const userInfo = {
-    //       displayName: user.displayName,
-    //       email: user.email,
-    //       emailVerified: user.emailVerified,
-    //       photoURL: user.photoURL,
-    //       isAnonymous: user.isAnonymous,
-    //       uid: user.uid,
-    //       providerData: user.providerData,
-    //     };
-    //   } else {
-    //     // this.setState({user: {}});
-    //   }
-    // });
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        const userInfo = {
+          displayName: user.displayName,
+          email: user.email,
+          // emailVerified: user.emailVerified,
+          // photoURL: user.photoURL,
+          // isAnonymous: user.isAnonymous,
+          uid: user.uid,
+          providerData: user.providerData,
+        };
+        this.props.authStatusChange(userInfo);
+      } else {
+        this.props.authStatusChange({});
+      }
+      this.props.isAuthenticating(false);
+    });
   }
 
   render() {
+    if(this.props.isAuthenticatingBool){
+      return (<LinearProgress />);
+    }
     return (
       <Switch>
         <PrivateRoute exact path="/" component={ Dashboard } />
@@ -43,8 +54,21 @@ class Routes extends React.Component {
   }
 }
 
-Routes.propTypes = {
-  history: PropTypes.object,
+Routes.defaultProps = {
+  authStatusChange: () => {},
+  isAuthenticatingBool: true,
 };
 
-export default Routes;
+Routes.propTypes = {
+  history: PropTypes.object,
+  authStatusChange: PropTypes.func,
+  isAuthenticating: PropTypes.func,
+  isAuthenticatingBool: PropTypes.bool,
+};
+
+export default compose(connect(state => ({
+  authenticated: state.AuthReducer.authenticated,
+  isAuthenticatingBool: state.AuthReducer.isAuthenticating,
+}), {
+  ...authActions,
+}))(Routes);

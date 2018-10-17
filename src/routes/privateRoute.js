@@ -18,7 +18,7 @@ class PrivateRoute extends React.Component {
   renderPropComponent() {
     const { authenticated, component: Component } = this.props;
     let componentToRender;
-
+    console.log("authenticated", authenticated);
     if (authenticated) {
       componentToRender = <Component {...this.props} />;
     } else {
@@ -42,6 +42,7 @@ PrivateRoute.propTypes = {
 
 export default compose(withRouter, connect(state => ({
   user: state.AuthReducer.user,
+  authenticated: state.AuthReducer.authenticated,
 }), {
   ...actions,
 }))(PrivateRoute);
