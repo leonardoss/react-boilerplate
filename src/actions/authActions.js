@@ -2,6 +2,7 @@ export const AUTH_STATUS_CHANGE = 'AUTH_STATUS_CHANGE';
 export const IS_AUTHENTICATING = 'IS_AUTHENTICATING';
 export const AUTH_WITH_FEDERATIONS = 'AUTH_WITH_FEDERATIONS';
 export const AUTH_WITH_USERNAME_AND_PASSWORD = 'AUTH_WITH_USERNAME_AND_PASSWORD';
+export const AUTH_SIGN_OUT = 'AUTH_SIGN_OUT';
 
 export function isAuthenticating(auth) {
   return {
@@ -29,5 +30,10 @@ export function authWithFacebook(federarion) {
   return {
     type: AUTH_WITH_FEDERATIONS,
     federation: 'facebook',
+  };
+}
+export function authSignOut() {
+  return {
+    type: AUTH_SIGN_OUT
   };
 }

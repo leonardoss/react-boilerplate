@@ -3,6 +3,7 @@ import {
   authStatusChange,
   authWithFederations,
   authWithUsernameAndPassword,
+  authSignOut,
 } from './auth';
 
 
@@ -11,5 +12,6 @@ export default function* rootSaga() {
     takeEvery('AUTH_STATUS_CHANGE', authStatusChange),
     takeLatest('AUTH_WITH_FEDERATIONS', authWithFederations),
     takeLatest('AUTH_WITH_USERNAME_AND_PASSWORD', authWithUsernameAndPassword),
+    takeLatest('AUTH_SIGN_OUT', authSignOut),
   ]);
 }

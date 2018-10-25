@@ -49,5 +49,16 @@ class AuthFirebase extends Auth {
       // ...
     });
   }
+  signOut(){
+    return firebase.auth().signOut()
+      .then(function() {
+        console.log("signOut OK");
+        return true;
+      })
+      .catch(function(error) {
+        console.log("signOut error", error);
+        return false;
+      });
+  }
 }
 export default AuthFirebase;

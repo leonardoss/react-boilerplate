@@ -2,6 +2,7 @@ import { put, call } from 'redux-saga/effects';
 import * as actions from '../actions/authActions';
 
 import AuthDriver from '../common/auth/AuthFirebase';
+import {AUTH_SIGN_OUT} from "../actions/authActions";
 
 const Auth = new AuthDriver();
 
@@ -33,4 +34,12 @@ export function* authWithFederations(action) {
   }
   yield put(actions.authStatusChange(response));
   yield put(actions.isAuthenticating(false));
+}
+
+export function* authSignOut(action) {
+  console.log("AUTH_SIGN_OUT", action);
+  const response = yield call(() => Auth.signOut());
+  if(response){
+    yield put(actions.authStatusChange({}));
+  }
 }
