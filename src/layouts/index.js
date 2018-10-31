@@ -21,7 +21,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, user, signOut } = this.props;
+    const { children, user, authSignOut } = this.props;
     const initials = 'displayName' in user ? user.displayName.slice(0,2).toUpperCase() :  ''
     return (
       <Grid container className="main" spacing={ 16 }>
@@ -42,7 +42,7 @@ class Layout extends React.Component {
                       aria-haspopup="true"
                       color="inherit"
                     >
-                      <Avatar onClick={signOut}>{initials}</Avatar>
+                      <Avatar onClick={authSignOut}>{initials}</Avatar>
                     </IconButton>
                   </Grid>
                 </Grid>
@@ -77,12 +77,12 @@ class Layout extends React.Component {
 }
 
 Layout.defaultProps = {
-  signOut: () => {},
+  authSignOut: () => {},
 };
 Layout.propTypes = {
   history: PropTypes.object,
   children: PropTypes.element.isRequired,
-  signOut: PropTypes.func,
+  authSignOut: PropTypes.func,
 };
 
 export default compose(withRouter, connect(state => ({

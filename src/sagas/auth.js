@@ -29,6 +29,10 @@ export function* authWithFederations(action) {
       console.log('authWithFederations facebook');
       response = yield call(() => Auth.authenticateWithFacebook());
       break;
+    case 'google':
+      console.log('authWithFederations google');
+      response = yield call(() => Auth.authenticateWithGoogle());
+      break;
     default:
       break;
   }

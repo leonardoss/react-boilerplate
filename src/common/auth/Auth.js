@@ -15,5 +15,17 @@ class Auth {
       resolve();
     });
   }
+  static getUser(){
+    console.log('[AuthDriver]', 'getUser', data);
+    return new Promise((resolve, reject) => {
+      resolve();
+    });
+  }
+  static updateUser(){
+    console.log('[AuthDriver]', 'updateUser', data);
+    return new Promise((resolve, reject) => {
+      resolve();
+    });
+  }
 }
 export default Auth;

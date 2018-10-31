@@ -16,6 +16,7 @@ import {connect} from "react-redux";
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 import * as authActions from "../actions/authActions";
+import AuthDriver from "../common/auth/AuthFirebase";
 
 class Routes extends React.Component {
   componentDidMount() {
@@ -45,9 +46,9 @@ class Routes extends React.Component {
     }
     return (
       <Switch>
-        <PrivateRoute exact path="/" component={ Dashboard } />
-        <PrivateRoute exact path="/about" component={ About } />
-        <PublicRoute exact path="/auth" component={ Login } />
+        <PrivateRoute exact path="/" component={ Dashboard } authenticated={this.props.authenticated} />
+        <PrivateRoute exact path="/about" component={ About } authenticated={this.props.authenticated} />
+        <PublicRoute exact path="/auth" component={ Login } authenticated={this.props.authenticated} />
         <Route component={ NotFound } />
       </Switch>
     );
@@ -64,6 +65,7 @@ Routes.propTypes = {
   authStatusChange: PropTypes.func,
   isAuthenticating: PropTypes.func,
   isAuthenticatingBool: PropTypes.bool,
+  authenticated: PropTypes.bool,
 };
 
 export default compose(connect(state => ({
