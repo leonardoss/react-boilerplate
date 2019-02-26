@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import Layout from '../layouts';
+import Layout from "../layouts";
 
 class Dashboard extends React.Component {
   constructor() {
@@ -10,15 +10,13 @@ class Dashboard extends React.Component {
   handleTest = param => {
     let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
 
-    console.log('test');
-  }
+    console.log("test");
+  };
 
   render() {
     return (
       <Layout>
-        <h2>
-          Dashboard
-        </h2>
+        <h2>Dashboard</h2>
       </Layout>
     );
   }

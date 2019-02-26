@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 class Layout extends React.Component {
   handleNavigation(route) {
@@ -11,9 +11,7 @@ class Layout extends React.Component {
 
   render() {
     const { children } = this.props;
-    return (
-      <div>{ children }</div>
-    );
+    return <div>{children}</div>;
   }
 }
 
