@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Title from '../components/Title';
+
 class NotFound extends React.Component {
   render() {
     return (
       <div className="notfound">
-        <h1>NotFound 404</h1>
+        <Title title="Not Found - 404" />
       </div>
     );
   }

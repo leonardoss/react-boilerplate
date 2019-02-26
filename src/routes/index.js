@@ -7,9 +7,9 @@ import About from '../containers/About';
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={ Dashboard } />
-    <Route exact path="/about" component={ About } />
-    <Route component={ NotFound } />
+    <Route exact path="/" component={Dashboard} />
+    <Route exact path="/about" component={About} />
+    <Route component={NotFound} />
   </Switch>
 );
 

@@ -2,6 +2,8 @@ import React from 'react';
 
 import Layout from '../layouts';
 
+import Title from '../components/Title';
+
 class Dashboard extends React.Component {
   constructor() {
     super();
@@ -11,14 +13,12 @@ class Dashboard extends React.Component {
     let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
 
     console.log('test');
-  }
+  };
 
   render() {
     return (
       <Layout>
-        <h2>
-          Dashboard
-        </h2>
+        <Title title="Dashboard" />
       </Layout>
     );
   }
